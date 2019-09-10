@@ -1,0 +1,440 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+a, a:hover, a:focus {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 85%;  /*設定container的寬度為螢幕寬度的85%*/
+  max-width: 1170px;  /*設定container的最大寬度為1170px */
+  margin: 0 auto;  /*設定container使用auto-margin的方式置中，使用此方式前，div必須要先給一個寬度才行*/
+  position: relative;
+}
+
+section {
+  padding: 100px 0;
+}
+
+header {
+  position: fixed; /*固定在最上方*/
+  width: 100%;
+  left: 0;
+  right: 0;
+  background-color: #222;
+  z-index: 100; /*數值越大，表示在最上層，向下滾動瀏覽頁面時，不會被其他物件蓋住*/
+}
+
+#logo {
+  float: left;
+}
+
+.nav {
+  float: right;
+}
+
+.nav li {
+  display: inline-block; /*以 inline 的方式排列（水平排列），同時又保留 block 的特性，可以設定 padding 和 margin。 */
+}
+
+.nav li a {
+  color: #fff;
+  text-transform: capitalize;
+  display: block;
+  padding: 10px 12px;
+}
+
+.home_bg {
+  background-image: url(https://picsum.photos/960/514?grayscale); /*假圖*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  background-attachment: fixed;
+}
+
+  .container_table { /*css垂直置中有七種方法，這裡用的是table方式*/
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .container_table_cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .container_table_cell h2 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 54px;
+  }
+
+  .social_icons a {
+    color: #fff;
+    display: inline-block;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 19px;
+    margin-right: 7px;
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  h2 {
+    margin-bottom: 75px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .col_left, .col_right {
+    float: left;
+    width: 50%;
+    padding: 0 15px;
+  }
+
+  .personal_info h3 {
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+  }
+
+  .personal_info p {
+    color: #767676;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+  .skill {
+    margin: 30px auto;
+  }
+
+  .skill li {
+  font-size: 15px;
+  line-height: 35px;
+  text-transform: capitalize;
+  }
+
+  .buttons .download_cv, .buttons .hire_me {
+    display: inline-block;
+  }
+
+  .buttons .download_cv {
+    margin-right: 18px;
+  }
+
+  .buttons a {
+    display: block;  /*此處設定的block，是為了後面設定按鈕內的字樣排版*/
+    color: #000;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 10px 38px;
+    text-transform: capitalize;
+  }
+
+  .buttons a:hover {  /*使用 pseudo-classes 來製作特效，設定想要滑鼠滑過物件時得到的效果*/
+    background: #000;
+    color: #fff;
+    -webkit-transition: all .4s linear;  /*適用於 Chrome 與 Safari 的效果 */
+    -moz-transition: all .4s linear;  /*適用於 FireFox 的效果 */
+    -ms-transition: all .4s linear;  /*適用於 IE 的效果 */
+    -o-transition: all .4s linear;  /*適用於 Opera 的效果 */
+    transition: all .4s linear;
+  }
+
+  .clearfix::after { /*意為從選取的物件後插入東西*/
+    content: '';
+    display: block;  /*寫成 display: block; 也可以*/
+    clear: both;
+  }
+
+  .service {
+    background-color: #f9f9f9;
+  }
+
+  .service_content {
+    float: left;
+    width: 33.3333333333%;
+    padding: 0 15px;
+  }
+
+  .service_content {
+    font-size: 30px;
+    line-height: 46px;
+  }
+
+  .service_content h3 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 13px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+  }
+
+  .service_content p {
+    color: #767676;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: justify;
+  }
+
+/*resume*/
+.col_horizontal {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #767676;
+}
+
+.col_horizontal:last-child {  /*設定最後一個col_horizontal物件不要有邊框*/
+  border-bottom: 0;
+}
+
+h3.resume_subtitle {
+  font-size: 20px;
+  margin-left: 15px;
+  margin-top: 12px;
+  text-transform: capitalize;
+}
+
+.col_horizontal .col_item {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.experience_year {
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.resume_detail {
+  font-size: 16px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+
+.resume_detail h6 {
+  font-size: 12px;
+  margin-bottom: 9px;
+  text-transform: capitalize;
+}
+
+.resume_detail p {
+  line-height: 22px;
+  text-align: justify;
+}
+
+/*Quote*/
+.quote {
+  background-image: url(https://picsum.photos/1920/435?grayscale);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  background-attachment: fixed;
+}
+
+.quote_inner {
+  color: #fff;
+  text-align: center;
+}
+
+.quote_inner h3 {
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+.quote_inner p {
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.quote_inner a {
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 11px;
+  padding: 12px 49px;
+  display: inline-block;
+  margin-top: 22px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background-attachment: fixed; /*滾動時背景圖固定的效果*/
+}
+
+.quote_inner a:hover {
+  background: #fff;
+  color: #000;
+  -webkit-transition: all .4s linear;  /*適用於 Chrome 與 Safari 的效果 */
+  -moz-transition: all .4s linear;  /*適用於 FireFox 的效果 */
+  -ms-transition: all .4s linear;  /*適用於 IE 的效果 */
+  -o-transition: all .4s linear;  /*適用於 Opera 的效果 */
+  transition: all .4s linear;
+}
+
+/*Latest Work*/
+.latest_work {
+  background-color: #f7f7f7;
+}
+
+.col_work {
+  float: left;
+  width: 33.3333333%;
+  padding: 0 15px;
+}
+
+.col_work a {
+  display: block;
+  margin-bottom: 14px;
+  position: relative;
+  -webkit-transition: .2s linear; /*點入連結後的轉場效果*/
+  -moz-transition: .2s linear;
+  -ms-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  top: 0;
+  left: 0;
+}
+
+.col_work a:hover {
+  box-shadow: 0 16px 22px 0 rgba(90, 91, 95, 0.3);
+  top: -5px;
+}
+
+/*Contact*/
+.contact {
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact .form_input:first-child, .contact .form_input:nth-child(2) {
+  float: left;
+  width: 50%;
+  padding: 0 15px;
+}
+
+.contact .form_input:nth-child(3) {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.contact input.form_style {
+  width: 100%;
+  border: none;    
+  border-bottom: 1px solid #333;
+  text-transform: capitalize;
+  padding-bottom: 19px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.contact textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  outline: none;
+}
+
+.form_submit {
+  text-align: center;
+  padding: 0 15px;
+}
+
+.form_submit input {
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 12px;
+  padding: 15px 60px;
+  margin-top: 16px;
+  margin-bottom: 14px;
+  cursor: pointer;  /* 讓游標指到的時候，變成手指形狀*/
+  -webkit-transition: .4s linear;
+  -moz-transition: .4s linear;
+  -ms-transition: .4s linear;
+  -o-transition: .4s linear;
+  transition: .4s linear;
+}
+
+.form_submit input:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Footer*/
+footer {
+  padding: 80px 0;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.footer_content p {
+  line-height: 22px;
+}
+
+.footer_icon a i {
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 15px;
+  margin-right: 15px;
+}
